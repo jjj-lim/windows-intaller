@@ -1,0 +1,31 @@
+{
+  "name": "electron-print-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "build": {
+    "appId": "com.cumahai.printapp",
+    "productName": "SUMBERMMAS APP",
+    "icon": "assets/logo_new.ico",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "installerIcon": "assets/logo_new.ico",
+      "uninstallerIcon": "assets/logo_new.ico",
+      "uninstallDisplayName": "SUMBERMMAS APP",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.13.2"
+  }
+}
