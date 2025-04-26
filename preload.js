@@ -1,5 +1,9 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  printFile: (filePath) => ipcRenderer.invoke('print-file', filePath)
+  printTxtInvoice: (url) => ipcRenderer.invoke('print-txt-invoice', url),
+  printPreview: () => ipcRenderer.invoke('print-preview'),
+  getPrinters: () => ipcRenderer.invoke('get-printers'),
+  onPrintSuccess: (callback) => ipcRenderer.on('print-success', callback),
+  onPrintFail: (callback) => ipcRenderer.on('print-fail', callback),
 });

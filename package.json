@@ -1,6 +1,8 @@
 {
-  "name": "electron-print-app",
-  "version": "1.0.0",
+  "name": "sumbermas",
+  "version": "2.0.0",
+  "description": "App bengkel",
+  "author": "J Liem",
   "main": "main.js",
   "build": {
     "appId": "com.cumahai.printapp",
